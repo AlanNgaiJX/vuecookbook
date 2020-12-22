@@ -19,6 +19,22 @@ export default {
                 {
                     name: "Cookbook",
                     path: "/cookbook"
+                },
+                {
+                    name: "Hearth",
+                    path: "/hearth"
+                },
+                {
+                    name: "JsApi",
+                    path: "/jsApi"
+                },
+                {
+                    name: "ServiceApi",
+                    path: "/serviceApi"
+                },
+                {
+                    name: "Lodash",
+                    path: "/lodash"
                 }
             ]
         };
