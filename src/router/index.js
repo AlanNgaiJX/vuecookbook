@@ -17,7 +17,8 @@ import HearthList from "@/pages/Hearth/HearthList.vue";
 import BubbleZoom from "@/pages/Hearth/BubbleZoom.vue";
 import ExamNextTick from "@/pages/Hearth/ExamNextTick.vue";
 import GridLayout from "@/pages/Hearth/GridLayout.vue";
-
+import WaterProgress from "@/pages/Hearth/WaterProgress.vue";
+import Triangle from "@/pages/Hearth/Triangle.vue";
 
 import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
 import JsApiList from "@/pages/JsApi/JsApiList.vue";
@@ -33,7 +34,6 @@ import LodashIndex from "@/pages/Lodash/LodashIndex.vue";
 import LodashList from "@/pages/Lodash/LodashList.vue";
 import Debounce from "@/pages/Lodash/Debounce.vue";
 
-// import 
 Vue.use(VueRouter);
 
 const routes = [
@@ -115,6 +115,16 @@ const routes = [
                 path: "/hearth/gridLayout",
                 name: "GridLayout",
                 component: GridLayout
+            },
+            {
+                path: "/hearth/waterProgress",
+                name: "WaterProgress",
+                component: WaterProgress
+            },
+            {
+                path: "/hearth/triangle",
+                name: "Triangle",
+                component: Triangle
             }
         ]
     },

@@ -27,6 +27,14 @@ export default {
                 {
                     name:"grid布局",
                     path:"/hearth/gridLayout"
+                },
+                {
+                    name:"水-进度条",
+                    path:"/hearth/waterProgress"
+                },
+                {
+                    name:"三角形",
+                    path:"/hearth/triangle"
                 }
             ]
         };

@@ -1,5 +1,7 @@
 # vuecookbook
 
+a vuecookbook includes seires demos of vue、css、js
+
 ## Project setup
 ```
 npm install
