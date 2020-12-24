@@ -1,6 +1,6 @@
 <template>
-    <div id="home">
-        <h1 class="bigTitle">Home</h1>
+    <div id="AlgorithmList">
+        <h1 class="bigTitle">Algorithm</h1>
         <ul class="list">
             <li v-for="(item, index) in list" :key="index" @click="routeTo(item.path)">
                 <span v-text="index + 1 + '.'" class="num"></span
@@ -12,33 +12,17 @@
 
 <script>
 export default {
-    name: "Home",
+    name: "AlgorithmList",
     data() {
         return {
             list: [
                 {
-                    name: "Cookbook",
-                    path: "/cookbook"
+                    name: "深度遍历",
+                    path: "/algorithm/DFS"
                 },
                 {
-                    name: "Hearth",
-                    path: "/hearth"
-                },
-                {
-                    name: "JsApi",
-                    path: "/jsApi"
-                },
-                {
-                    name: "ServiceApi",
-                    path: "/serviceApi"
-                },
-                {
-                    name: "Lodash",
-                    path: "/lodash"
-                },
-                 {
-                    name: "Algorithm",
-                    path: "/algorithm"
+                    name: "广度遍历",
+                    path: "/algorithm/BFS"
                 }
             ]
         };
@@ -54,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#home {
+#AlgorithmList {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
@@ -68,7 +52,7 @@ export default {
 
     .list {
         font-size: 0.32rem;
-        width: 3rem;
+        // width: 3rem;
 
         li {
             color: #ffffff;

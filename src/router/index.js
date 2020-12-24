@@ -34,6 +34,11 @@ import LodashIndex from "@/pages/Lodash/LodashIndex.vue";
 import LodashList from "@/pages/Lodash/LodashList.vue";
 import Debounce from "@/pages/Lodash/Debounce.vue";
 
+import AlgorithmIndex from "@/pages/Algorithm/AlgorithmIndex.vue";
+import AlgorithmList from "@/pages/Algorithm/AlgorithmList.vue";
+import DFS from "@/pages/Algorithm/DFS.vue";
+import BFS from "@/pages/Algorithm/BFS.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -175,7 +180,7 @@ const routes = [
         ]
     },
     {
-        path:"/lodash",
+        path: "/lodash",
         name: "Lodash",
         component: LodashIndex,
         redirect: "/lodash/lodashList",
@@ -189,6 +194,29 @@ const routes = [
                 path: "/lodash/debounce",
                 name: "Debounce",
                 component: Debounce
+            }
+        ]
+    },
+    {
+        path: "/algorithm",
+        name: "Algorithm",
+        component: AlgorithmIndex,
+        redirect: "/algorithm/algorithmList",
+        children: [
+            {
+                path: "/algorithm/algorithmList",
+                name: "Algorithm",
+                component: AlgorithmList
+            },
+            {
+                path: "/algorithm/DFS",
+                name: "DFS",
+                component: DFS
+            },
+            {
+                path: "/algorithm/BFS",
+                name: "BFS",
+                component: BFS
             }
         ]
     }
