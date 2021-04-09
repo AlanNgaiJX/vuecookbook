@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath:'/temp/',
+    // publicPath:'/temp/',
     devServer: {
         port: 8080,
         proxy: {
@@ -10,6 +10,17 @@ module.exports = {
                 changeOrigin: true,
                 pathRewrite: {
                     "^/youdao": "/"
+                }
+            },
+            "/juejin": {
+                target: "https://api.juejin.cn",
+                changeOrigin: true,
+                headers: {
+                    refer: "https://juejin.cn/",
+                    origin: "https://juejin.cn"
+                },
+                pathRewrite: {
+                    "^/juejin": "/"
                 }
             }
         }

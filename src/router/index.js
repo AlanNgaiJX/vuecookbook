@@ -11,6 +11,11 @@ import StaticProb from "@/pages/Cookbook/StaticProb.vue";
 import RecursionComponents from "@/pages/Cookbook/RecursionComponents.vue";
 import Slot from "@/pages/Cookbook/Slot.vue";
 import Transition from "@/pages/Cookbook/Transition.vue";
+import KeepAliveTest from "@/pages/Cookbook/KeepAliveTest.vue";
+import NavGuard from "@/pages/Cookbook/NavGuard.vue";
+import NavA from "@/components/cookbook/navGuard/navA.vue";
+import NavB from "@/components/cookbook/navGuard/navB.vue";
+import NavC from "@/components/cookbook/navGuard/navC.vue";
 
 import HearthIndex from "@/pages/Hearth/HearthIndex.vue";
 import HearthList from "@/pages/Hearth/HearthList.vue";
@@ -29,6 +34,7 @@ import ServiceApiList from "@/pages/ServiceApi/ServiceApiList.vue";
 import YoudaoOcrApi from "@/pages/ServiceApi/YoudaoOcrApi.vue";
 import GetExifData from "@/pages/ServiceApi/GetExifData.vue";
 import NewGetExifData from "@/pages/ServiceApi/newGetExifData.vue";
+import JuejinSearch from "@/pages/ServiceApi/JuejinSearch.vue";
 
 import LodashIndex from "@/pages/Lodash/LodashIndex.vue";
 import LodashList from "@/pages/Lodash/LodashList.vue";
@@ -92,6 +98,37 @@ const routes = [
                 path: "/cookbook/transition",
                 name: "Transition",
                 component: Transition
+            },
+            {
+                path: "/cookbook/keepAliveTest",
+                name: "KeepAliveTest",
+                component: KeepAliveTest
+            },
+            {
+                path: "/cookbook/navGuard",
+                name: "NavGuard",
+                component: NavGuard,
+                children: [
+                    {
+                        path: "/cookbook/navGuard/a",
+                        name: "a",
+                        component: NavA,
+                        beforeEnter(to, from, next) {
+                            console.log("**** beforeEnter ****");
+                            next();
+                        }
+                    },
+                    {
+                        path: "/cookbook/navGuard/b",
+                        name: "b",
+                        component: NavB
+                    },
+                    {
+                        path: "/cookbook/navGuard/c",
+                        name: "c",
+                        component: NavC
+                    }
+                ]
             }
         ]
     },
@@ -176,6 +213,11 @@ const routes = [
                 path: "/serviceApi/newGetExifData",
                 name: "NewGetExifData",
                 component: NewGetExifData
+            },
+            {
+                path: "/serviceApi/juejinSearch",
+                name: "JuejinSearch",
+                component: JuejinSearch
             }
         ]
     },
@@ -224,6 +266,20 @@ const routes = [
 
 const router = new VueRouter({
     routes
+});
+
+router.beforeEach((to, from, next) => {
+    console.log("**** beforeEach ****");
+    next();
+});
+
+router.beforeResolve((to, from, next) => {
+    console.log("**** beforeResolve ****");
+    next();
+});
+
+router.afterEach(() => {
+    console.log("**** afterEach ****");
 });
 
 export default router;

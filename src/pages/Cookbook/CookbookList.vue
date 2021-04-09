@@ -43,6 +43,14 @@ export default {
                 {
                     name: "过渡",
                     path: "/cookbook/transition"
+                },
+                 {
+                    name: "keep-alive",
+                    path: "/cookbook/keepAliveTest"
+                },
+                {
+                    name: "导航守卫",
+                    path: "/cookbook/navGuard"
                 }
             ]
         };

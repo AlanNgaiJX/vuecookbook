@@ -27,6 +27,10 @@ export default {
                 {
                     name: "newGetExifData",
                     path: "/serviceApi/newGetExifData"
+                },
+                {
+                    name: "juejinSearch",
+                    path: "/serviceApi/juejinSearch"
                 }
             ]
         };
