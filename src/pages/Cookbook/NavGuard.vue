@@ -13,6 +13,8 @@
         <button @click="routeTo('/cookbook/navGuard/c')">c</button>
         <button @click="open">open new</button>
         <button @click="test">test</button>
+        <button @click="replaceTo('/cookbook/navGuard/b')">replace to b</button>
+        <button @click="replaceTo('/cookbook/navGuard/c')">replace to c</button>
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
@@ -37,6 +39,9 @@ export default {
     methods: {
         routeTo(path) {
             this.$router.push({ path });
+        },
+        replaceTo(path) {
+            this.$router.replace({ path });
         },
         open() {
             const { href } = this.$router.resolve({

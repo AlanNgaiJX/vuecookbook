@@ -1,20 +1,15 @@
-(function(doc, win) {
-    var docEl = doc.documentElement,
-        resizeEvt =
-            "orientationchange" in window
-                ? "orientationchange"
-                : "resize",
-        recalc = function(timing) {
-            var clientWidth = docEl.clientWidth;
-            if (!clientWidth) return;
-            docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
-        };
+(function (doc, win) {
+    const docEl = doc.documentElement;
+    const resizeEvt = "orientationchange" in window ? "orientationchange" : "resize";
 
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-    doc.addEventListener(
-        "DOMContentLoaded",
-        recalc("DOMContentLoaded"),
-        false
-    );
+    function recalc() {
+        docEl.style.fontSize = 100 * (docEl.clientWidth / 750) + "px";
+    }
+
+    try {
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+    } catch (err) {
+        console.warn("setup rem fail !!!");
+    }
 })(document, window);

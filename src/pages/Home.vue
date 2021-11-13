@@ -1,7 +1,6 @@
 <template>
     <div id="home">
-        <!-- <h1 class="bigTitle">Home</h1> -->
-        <div :style="{ color: randomColor }">大气候</div>
+        <h1 class="bigTitle">Home</h1>
         <ul class="list">
             <li v-for="(item, index) in list" :key="index" @click="routeTo(item.path)">
                 <span v-text="index + 1 + '.'" class="num"></span
@@ -44,18 +43,6 @@ export default {
             ]
         };
     },
-computed: {
-    randomColor() {
-        const random = Math.random();
-        if (random <= 0.4) {
-            return "red";
-        } else if (random > 0.4 && random <= 0.8) {
-            return "green";
-        } else {
-            return "yellow";
-        }
-    }
-},
     methods: {
         routeTo(path) {
             this.$router.push({
