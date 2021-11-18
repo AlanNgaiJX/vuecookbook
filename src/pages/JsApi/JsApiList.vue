@@ -19,6 +19,10 @@ export default {
                 {
                     name: "WebAudioApi",
                     path: "/jsApi/webAudioApi"
+                },
+                {
+                    name: "GaodeMapApi",
+                    path: "/jsApi/gaodeMapApi"
                 }
             ]
         };

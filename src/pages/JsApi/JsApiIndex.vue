@@ -1,6 +1,6 @@
 <template>
     <div id="jsApi">
-        <NavHead></NavHead>
+        <NavHead v-if="showHead"></NavHead>
         <router-view></router-view>
     </div>
 </template>
@@ -10,8 +10,13 @@ import NavHead from "@/components/common/navHead.vue";
 
 export default {
     name: "JsApi",
-    components:{
+    components: {
         NavHead
+    },
+    computed: {
+        showHead() {
+            return !this.$route.meta.noCommonHead;
+        }
     }
 };
 </script>

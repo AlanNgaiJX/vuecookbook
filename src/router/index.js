@@ -28,6 +28,9 @@ import Triangle from "@/pages/Hearth/Triangle.vue";
 import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
 import JsApiList from "@/pages/JsApi/JsApiList.vue";
 import WebAudioApi from "@/pages/JsApi/WebAudioApi.vue";
+import GaodeMapApi from "@/pages/JsApi/GaodeMapApi/index.vue";
+import BasicMap from "@/pages/JsApi/GaodeMapApi/BasicMap.vue";
+import SelectPosition from "@/pages/JsApi/GaodeMapApi/SelectPosition.vue";
 
 import ServiceApiIndex from "@/pages/ServiceApi/ServiceApiIndex.vue";
 import ServiceApiList from "@/pages/ServiceApi/ServiceApiList.vue";
@@ -185,6 +188,26 @@ const routes = [
                 path: "/jsApi/webAudioApi",
                 name: "WebAudioApi",
                 component: WebAudioApi
+            },
+            {
+                path: "/jsApi/gaodeMapApi",
+                name: "GaodeMapApi",
+                component: GaodeMapApi,
+                children: [
+                    {
+                        path: '/jsApi/gaodeMapApi/basicMap',
+                        name:"BasicMap",
+                        component: BasicMap
+                    },
+                    {
+                        path: '/jsApi/gaodeMapApi/selectPosition',
+                        name:"SelectPosition",
+                        component: SelectPosition,
+                        meta:{
+                            noCommonHead: true
+                        }
+                    }
+                ]
             }
         ]
     },
