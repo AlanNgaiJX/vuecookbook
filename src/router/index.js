@@ -24,6 +24,7 @@ import ExamNextTick from "@/pages/Hearth/ExamNextTick.vue";
 import GridLayout from "@/pages/Hearth/GridLayout.vue";
 import WaterProgress from "@/pages/Hearth/WaterProgress.vue";
 import Triangle from "@/pages/Hearth/Triangle.vue";
+import Scoped from "@/pages/Hearth/Scoped.vue";
 
 import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
 import JsApiList from "@/pages/JsApi/JsApiList.vue";
@@ -47,6 +48,10 @@ import AlgorithmIndex from "@/pages/Algorithm/AlgorithmIndex.vue";
 import AlgorithmList from "@/pages/Algorithm/AlgorithmList.vue";
 import DFS from "@/pages/Algorithm/DFS.vue";
 import BFS from "@/pages/Algorithm/BFS.vue";
+
+import KeepAliveRefreshIndex from "@/pages/keepAliveRefresh/KeepAliveRefreshIndex.vue";
+
+import refreshListHelper from "./refreshListHelper";
 
 Vue.use(VueRouter);
 
@@ -170,6 +175,11 @@ const routes = [
                 path: "/hearth/triangle",
                 name: "Triangle",
                 component: Triangle
+            },
+            {
+                path: "/hearth/scoped",
+                name: "Scoped",
+                component: Scoped
             }
         ]
     },
@@ -195,15 +205,15 @@ const routes = [
                 component: GaodeMapApi,
                 children: [
                     {
-                        path: '/jsApi/gaodeMapApi/basicMap',
-                        name:"BasicMap",
+                        path: "/jsApi/gaodeMapApi/basicMap",
+                        name: "BasicMap",
                         component: BasicMap
                     },
                     {
-                        path: '/jsApi/gaodeMapApi/selectPosition',
-                        name:"SelectPosition",
+                        path: "/jsApi/gaodeMapApi/selectPosition",
+                        name: "SelectPosition",
                         component: SelectPosition,
-                        meta:{
+                        meta: {
                             noCommonHead: true
                         }
                     }
@@ -284,6 +294,32 @@ const routes = [
                 component: BFS
             }
         ]
+    },
+    {
+        path: "/keepAliveRefresh",
+        name: "KeepAliveRefresh",
+        component: KeepAliveRefreshIndex,
+        redirect: "/keepAliveRefresh/index",
+        children: [
+            {
+                path: "/keepAliveRefresh/index",
+                name: "index",
+                component: () => import("../pages/keepAliveRefresh/index.vue")
+            },
+            {
+                path: "/keepAliveRefresh/list",
+                name: "list",
+                component: () => import("../pages/keepAliveRefresh/list.vue"),
+                meta: {
+                    keepAlive: true
+                }
+            },
+            {
+                path: "/keepAliveRefresh/detail",
+                name: "detail",
+                component: () => import("../pages/keepAliveRefresh/detail.vue")
+            }
+        ]
     }
 ];
 
@@ -291,14 +327,22 @@ const router = new VueRouter({
     routes
 });
 
+refreshListHelper.install(router);
+
 router.beforeEach((to, from, next) => {
     console.log("**** beforeEach ****");
-    next();
+    next((vm)=>{
+        console.log(vm);
+        debugger
+    });
 });
 
 router.beforeResolve((to, from, next) => {
     console.log("**** beforeResolve ****");
-    next();
+    next((vm)=>{
+        console.log(vm);
+        debugger
+    });
 });
 
 router.afterEach(() => {

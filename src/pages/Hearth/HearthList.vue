@@ -35,6 +35,10 @@ export default {
                 {
                     name:"三角形",
                     path:"/hearth/triangle"
+                },
+                {
+                    name:"scoped",
+                    path:"/hearth/scoped"
                 }
             ]
         };
