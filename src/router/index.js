@@ -62,6 +62,11 @@ const routes = [
         component: Home
     },
     {
+        path: "/about",
+        name: "about",
+        component: () => import("../pages/About.vue"),
+    },
+    {
         path: "/cookbook",
         name: "Cookbook",
         component: CookbookIndex,
@@ -165,6 +170,11 @@ const routes = [
                 path: "/hearth/gridLayout",
                 name: "GridLayout",
                 component: GridLayout
+            },
+            {
+                path: "/hearth/flexibleGrid",
+                name: "FlexibleGrid",
+                component: () => import("@/pages/Hearth/flexibleGrid.vue")
             },
             {
                 path: "/hearth/waterProgress",

@@ -29,6 +29,10 @@ export default {
                     path:"/hearth/gridLayout"
                 },
                 {
+                    name:"弹性grid布局",
+                    path:"/hearth/flexibleGrid"
+                },
+                {
                     name:"水-进度条",
                     path:"/hearth/waterProgress"
                 },
