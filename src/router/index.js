@@ -64,7 +64,7 @@ const routes = [
     {
         path: "/about",
         name: "about",
-        component: () => import("../pages/About.vue"),
+        component: () => import("../pages/About.vue")
     },
     {
         path: "/cookbook",
@@ -330,6 +330,18 @@ const routes = [
                 component: () => import("../pages/keepAliveRefresh/detail.vue")
             }
         ]
+    },
+    {
+        path: "/echart",
+        name: "Echart",
+        component: () => import("../pages/Echart/index.vue"),
+        children: [
+            {
+                path: "/echart/map",
+                name: "map",
+                component: () => import("../pages/Echart/map.vue")
+            }
+        ]
     }
 ];
 
@@ -341,17 +353,17 @@ refreshListHelper.install(router);
 
 router.beforeEach((to, from, next) => {
     console.log("**** beforeEach ****");
-    next((vm)=>{
+    next(vm => {
         console.log(vm);
-        debugger
+        debugger;
     });
 });
 
 router.beforeResolve((to, from, next) => {
     console.log("**** beforeResolve ****");
-    next((vm)=>{
+    next(vm => {
         console.log(vm);
-        debugger
+        debugger;
     });
 });
 

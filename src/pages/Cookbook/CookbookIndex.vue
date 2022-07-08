@@ -1,22 +1,16 @@
 <template>
     <div id="cookbook">
-        <NavHead></NavHead>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-import NavHead from "@/components/common/navHead.vue";
-
 export default {
-    name: "Cookbook",
-    components:{
-        NavHead
-    }
+    name: "Cookbook"
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #cookbook {
 }
 </style>

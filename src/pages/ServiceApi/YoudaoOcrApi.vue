@@ -1,34 +1,32 @@
 <template>
     <div id="youdaoOcrApi">
-        <FixedScrollView :position="['0.8rem', 0, 0, 0]">
-            <button @click="selectImage">选择图片</button>
-            <div v-if="queueStatus">
-                <button @click="downLoadAllTextOnce">合并下载所有文本</button>
-                <button @click="downLoadAllText">单独下载所有文本</button>
-                <button @click="downLoadAllJsonOnce">合并下载所有请求</button>
-                <button @click="downLoadAllJson">单独下载所有请求</button>
-            </div>
+        <button @click="selectImage">选择图片</button>
+        <div v-if="queueStatus">
+            <button @click="downLoadAllTextOnce">合并下载所有文本</button>
+            <button @click="downLoadAllText">单独下载所有文本</button>
+            <button @click="downLoadAllJsonOnce">合并下载所有请求</button>
+            <button @click="downLoadAllJson">单独下载所有请求</button>
+        </div>
 
-            <ul class="fetchingQueueList">
-                <li class="fetchingQueueItem" v-for="(item, index) in fetchingQueue" :key="item.id">
-                    <div class="fileName" v-text="item.id"></div>
-                    <div class="fetchingState">{{ item.fetched | fetchedState }}</div>
-                    <div class="btn-group" v-if="item.fetched">
-                        <div class="btn btn-downTxt" @click="downLoadText(index)">下载文本</div>
-                        <div class="btn btn-downJson" @click="downLoadJson(index)">下载请求</div>
-                        <div class="btn btn-downBoth" @click="downLoadBoth(index)">全部下载</div>
-                    </div>
-                </li>
-            </ul>
-            <input
-                type="file"
-                accept="image/*"
-                id="fileInput"
-                multiple="multiple"
-                @change="handleSelectImage($event)"
-                v-show="false"
-            />
-        </FixedScrollView>
+        <ul class="fetchingQueueList">
+            <li class="fetchingQueueItem" v-for="(item, index) in fetchingQueue" :key="item.id">
+                <div class="fileName" v-text="item.id"></div>
+                <div class="fetchingState">{{ item.fetched | fetchedState }}</div>
+                <div class="btn-group" v-if="item.fetched">
+                    <div class="btn btn-downTxt" @click="downLoadText(index)">下载文本</div>
+                    <div class="btn btn-downJson" @click="downLoadJson(index)">下载请求</div>
+                    <div class="btn btn-downBoth" @click="downLoadBoth(index)">全部下载</div>
+                </div>
+            </li>
+        </ul>
+        <input
+            type="file"
+            accept="image/*"
+            id="fileInput"
+            multiple="multiple"
+            @change="handleSelectImage($event)"
+            v-show="false"
+        />
     </div>
 </template>
 
@@ -37,13 +35,9 @@ import axios from "axios";
 import sha256 from "sha256";
 import qs from "qs";
 
-import FixedScrollView from "@/components/common/fixedScrollView.vue";
-
 export default {
     name: "youdaoOcrApi",
-    components: {
-        FixedScrollView
-    },
+    components: {},
     data() {
         return {
             config: {
@@ -342,17 +336,17 @@ export default {
 <style lang="scss" scoped>
 #youdaoOcrApi {
     .fetchingQueueList {
-        margin-top: 0.8rem;
+        margin-top: 40px;
 
         .fetchingQueueItem {
             box-shadow: 0 2px 27px 6px rgba(0, 0, 0, 0.12);
-            margin-bottom: 0.2rem;
+            margin-bottom: 10px;
 
             .btn-group {
                 display: flex;
 
                 .btn {
-                    margin-right: 0.2rem;
+                    margin-right: 10px;
                 }
             }
         }

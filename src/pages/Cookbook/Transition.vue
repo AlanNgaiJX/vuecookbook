@@ -1,31 +1,25 @@
 <template>
     <div id="transition">
-        <FixedScrollView :position="['0.8rem', 0, 0, 0]">
-            <button @click="a = !a">switichA</button>
-            <button @click="b = !b">switichB</button>
-            <button @click="c = !c">switichC</button>
+        <button @click="a = !a">switichA</button>
+        <button @click="b = !b">switichB</button>
+        <button @click="c = !c">switichC</button>
 
-            <div>
-                <transition name="myFade">
-                    <div class="rect a" v-show="a">A</div>
-                </transition>
+        <div>
+            <transition name="myFade">
+                <div class="rect a" v-show="a">A</div>
+            </transition>
 
-                <div class="rect b" v-show="b">B</div>
+            <div class="rect b" v-show="b">B</div>
 
-                <div class="rect c" v-show="c">C</div>
-            </div>
-        </FixedScrollView>
+            <div class="rect c" v-show="c">C</div>
+        </div>
     </div>
 </template>
 
 <script>
-import FixedScrollView from "@/components/common/fixedScrollView.vue";
-
 export default {
     name: "trans",
-    components: {
-        FixedScrollView
-    },
+    components: {},
     data() {
         return {
             a: false,
@@ -39,8 +33,8 @@ export default {
 <style lang="scss">
 #transition {
     .rect {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 450px;
+        height: 450px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,8 +52,7 @@ export default {
         }
     }
 
-    .myFade{
-        
+    .myFade {
     }
 }
 </style>

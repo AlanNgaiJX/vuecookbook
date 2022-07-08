@@ -418,12 +418,12 @@ export default {
 
     .cancel-btn {
         background-color: #fff;
-        width: 0.6rem;
-        height: 0.6rem;
-        padding: 0.04rem;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
         position: fixed;
-        top: 0.8rem;
-        left: 0.4rem;
+        top: 8px;
+        left: 4px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -432,24 +432,24 @@ export default {
         z-index: 888;
 
         .icon {
-            width: 0.6rem;
-            height: 0.6rem;
+            width: 30px;
+            height: 30px;
             fill: #666;
         }
     }
 
     .confirm-btn {
-        width: 0.8rem;
-        height: 0.6rem;
+        width: 80px;
+        height: 60px;
         position: fixed;
-        top: 0.8rem;
-        right: 0.4rem;
+        top: 8px;
+        right: 4px;
         z-index: 888;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0.1rem;
-        font-size: 0.24rem;
+        border-radius: 10px;
+        font-size: 24px;
         background-color: #409eff;
         color: #fff;
         opacity: 0.6;
@@ -471,17 +471,18 @@ export default {
 
         .input-wrap {
             width: 100%;
-            height: 1.2rem;
+            height: 60px;
             display: flex;
             align-items: center;
             box-sizing: border-box;
-            padding: 0.2rem;
+            padding: 20px;
+            margin-top: 10px;
 
             .label {
-                width: 0.44rem;
-                height: 0.44rem;
+                width: 22px;
+                height: 22px;
                 flex-shrink: 0;
-                margin-right: 0.2rem;
+                margin-right: 20px;
 
                 .icon {
                     width: 100%;
@@ -492,20 +493,20 @@ export default {
 
             .search-input {
                 flex: 1;
-                height: 0.6rem;
+                height: 60px;
                 color: #333;
-                font-size: 0.28rem;
-                padding: 0 0.2rem;
+                font-size: 16px;
+                padding: 0 20px;
                 border: none;
                 background-color: #eee;
-                border-radius: 0.15rem;
+                border-radius: 15px;
             }
 
             .btn-clear {
-                width: 1rem;
+                width: 22px;
                 text-align: center;
                 color: #666;
-                font-size: 0.28rem;
+                font-size: 16px;
             }
         }
 
@@ -515,39 +516,39 @@ export default {
             overflow-x: hidden;
             overflow-y: auto;
             box-sizing: border-box;
-            padding: 0.3rem;
+            padding: 15px;
 
             .address-list {
                 .address-item {
-                    margin-bottom: 0.4rem;
+                    margin-bottom: 20px;
                     display: flex;
 
                     .left {
                         flex: 1;
                         .address-name {
-                            font-size: 0.28rem;
+                            font-size: 14px;
                             color: #333;
-                            margin-bottom: 0.1rem;
+                            margin-bottom: 5px;
                         }
 
                         .address-detail {
-                            font-size: 0.26rem;
+                            font-size: 12px;
                             color: #666;
-                            line-height: 0.38rem;
+                            line-height: 19px;
                         }
                     }
 
                     .right {
-                        width: 0.44rem;
+                        width: 22px;
                         height: 100%;
-                        margin-left: 0.2rem;
+                        margin-left: 10px;
                         display: flex;
                         align-items: center;
 
                         .selected {
                             .icon {
-                                width: 0.44rem;
-                                height: 0.44rem;
+                                width: 22px;
+                                height: 22px;
                                 fill: #409eff;
                             }
                         }

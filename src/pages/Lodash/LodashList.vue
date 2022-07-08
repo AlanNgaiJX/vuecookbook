@@ -1,5 +1,5 @@
 <template>
-    <div id="LodashList">
+    <div id="LodashList" class="global-router-list">
         <h1 class="bigTitle">Lodash</h1>
         <ul class="list">
             <li v-for="(item, index) in list" :key="index" @click="routeTo(item.path)">
@@ -32,40 +32,3 @@ export default {
     }
 };
 </script>
-
-<style lang="scss" scoped>
-#LodashList {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-
-    .bigTitle {
-        margin-bottom: 0.8rem;
-    }
-
-    .list {
-        font-size: 0.32rem;
-        // width: 3rem;
-
-        li {
-            color: #ffffff;
-            background-color: blue;
-            margin-top: 0.1rem;
-            padding: 0.1rem;
-            box-sizing: border-box;
-            cursor: pointer;
-
-            .num {
-                margin-right: 0.2rem;
-            }
-
-            .name {
-                font-weight: bold;
-            }
-        }
-    }
-}
-</style>

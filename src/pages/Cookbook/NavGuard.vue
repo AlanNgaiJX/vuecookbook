@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2021-03-18 23:10:53
- * @LastEditTime: 2021-03-19 20:51:54
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /vuecookbook/src/pages/Cookbook/NavGuard.vue
--->
 <template>
     <div id="nav-guard">
         <button @click="routeTo('/cookbook/navGuard/a')">a</button>
@@ -60,6 +52,6 @@ export default {
 
 <style lang="scss">
 #nav-guard {
-    padding-top: 2rem;
+    padding-top: 200px;
 }
 </style>

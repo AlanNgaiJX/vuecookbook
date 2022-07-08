@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     // publicPath:'/temp/',
     devServer: {
@@ -23,6 +25,12 @@ module.exports = {
                     "^/juejin": "/"
                 }
             }
+        }
+    },
+    pluginOptions: {
+        "style-resources-loader": {
+            preProcessor: "scss",
+            patterns: [path.resolve(__dirname, "./src/assets/css/global.scss")]
         }
     }
 };

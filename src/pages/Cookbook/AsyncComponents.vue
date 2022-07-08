@@ -1,30 +1,27 @@
 <!-- 异步组件 -->
 <template>
     <div id="AsyncComponents">
-        <FixedScrollView :position="['0.8rem', 0, 0, 0]">
-            <div class="viewContent">
-                <h1>AsyncComponents</h1>
-                <h2>异步组件:</h2>
+        <div class="viewContent">
+            <h1>AsyncComponents</h1>
+            <h2>异步组件:</h2>
 
-                <button @click="A = !A">switchA</button>
-                <button @click="B = !B">switchB</button>
-                <button @click="C = !C">switchC</button>
+            <button @click="A = !A">switchA</button>
+            <button @click="B = !B">switchB</button>
+            <button @click="C = !C">switchC</button>
 
-                <ComA v-if="A"></ComA>
-                <ComB v-if="B"></ComB>
-                <ComC2 v-if="C" :smile="'hhhh'"></ComC2>
+            <ComA v-if="A"></ComA>
+            <ComB v-if="B"></ComB>
+            <ComC2 v-if="C" :smile="'hhhh'"></ComC2>
 
-                <div class="conclude">
-                    <p>打开network > js查看，组件被分包异步加载</p>
-                    <img src="@/assets/image/asyncComponentsRes.png" alt="" />
-                </div>
+            <div class="conclude">
+                <p>打开network > js查看，组件被分包异步加载</p>
+                <img src="@/assets/image/asyncComponentsRes.png" alt="" />
             </div>
-        </FixedScrollView>
+        </div>
     </div>
 </template>
 
 <script>
-import FixedScrollView from "@/components/common/fixedScrollView.vue";
 import Loading from "@/components/cookbook/asyncComponents/loading.vue";
 import Error from "@/components/cookbook/asyncComponents/error.vue";
 
@@ -65,7 +62,6 @@ const ComC2 = () => ({
 export default {
     name: "AsyncComponents",
     components: {
-        FixedScrollView,
         ComA,
         ComB,
         ComC2
@@ -83,11 +79,11 @@ export default {
 <style lang="scss" scoped>
 #AsyncComponents {
     .viewContent {
-        padding: 0.5rem;
-        
+        padding: 50px;
+
         .conclude {
-            margin-top: 1rem;
-            font-size: 0.3rem;
+            margin-top: 10px;
+            font-size: 30px;
 
             img {
                 width: 100%;

@@ -16,41 +16,36 @@
                 </select>
             </div>
         </div>
-        <FixedScrollView :position="['1rem', 0, 0, 0]">
-            <ul class="article-list" v-if="!isFetching">
-                <li
-                    :class="['article-item',!article.link? 'disable': '' ]"
-                    v-for="(article, index) in articleList"
-                    :key="index"
-                    @click="linkTo(article.link)"
-                >
-                    <div class="detial">
-                        <p class="index" v-text="index + 1"></p>
-                        <p class="author-name" v-text="article.authorName"></p>
-                        <p class="time">{{ article.time | timeFromNow }}</p>
-                        <p class="like-count" v-text="'like * ' + article.likeCount"></p>
-                    </div>
-                    <div class="title" v-text="article.title"></div>
-                    <div class="describe" v-text="article.describe"></div>
-                </li>
-            </ul>
-            <div v-else>fetching ...</div>
-        </FixedScrollView>
+        <ul class="article-list" v-if="!isFetching">
+            <li
+                :class="['article-item', !article.link ? 'disable' : '']"
+                v-for="(article, index) in articleList"
+                :key="index"
+                @click="linkTo(article.link)"
+            >
+                <div class="detial">
+                    <p class="index" v-text="index + 1"></p>
+                    <p class="author-name" v-text="article.authorName"></p>
+                    <p class="time">{{ article.time | timeFromNow }}</p>
+                    <p class="like-count" v-text="'like * ' + article.likeCount"></p>
+                </div>
+                <div class="title" v-text="article.title"></div>
+                <div class="describe" v-text="article.describe"></div>
+            </li>
+        </ul>
+        <div v-else>fetching ...</div>
     </div>
 </template>
 
 <script>
 import axios from "axios";
 import moment from "moment";
-import FixedScrollView from "@/components/common/fixedScrollView.vue";
 
 moment.locale("zh-cn");
 
 export default {
     name: "juejinSearch",
-    components: {
-        FixedScrollView
-    },
+    components: {},
     data() {
         return {
             articleList: [],
@@ -158,7 +153,7 @@ export default {
 
                     case "normal":
                         return;
-                        
+
                     default:
                         break;
                 }
@@ -178,13 +173,13 @@ export default {
     .serach-pannel {
         position: fixed;
         top: 0;
-        height: 1rem;
+        height: 50px;
         background-color: yellow;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0.3rem;
+        padding: 0 30px;
         box-sizing: border-box;
 
         .search-input {
@@ -192,16 +187,16 @@ export default {
             align-items: center;
 
             input {
-                width: 2rem;
+                width: 100px;
             }
 
             input,
             button {
-                height: 0.6rem;
+                height: 30px;
             }
 
             button {
-                margin-left: 0.1rem;
+                margin-left: 10px;
                 cursor: pointer;
             }
         }
@@ -210,23 +205,23 @@ export default {
             display: flex;
 
             .size-setting {
-                width: 0.8rem;
-                margin-right: 0.2rem;
+                width: 40px;
+                margin-right: 10px;
             }
         }
     }
 
     .article-list {
         box-sizing: border-box;
-        padding: 0 0.3rem;
+        padding: 0 15px;
         color: #333;
 
         .article-item {
             border-top: 1px solid #eee;
-            margin-top: 0.5rem;
-            padding: 0.3rem 0;
+            margin-top: 25px;
+            padding: 15px 0;
 
-            &.disable{
+            &.disable {
                 background-color: rgba(255, 0, 0, 0.091);
             }
 
@@ -238,7 +233,7 @@ export default {
                     &::before {
                         content: "·";
                         display: inline-block;
-                        margin: 0 0.2rem;
+                        margin: 0 10px;
                         color: #999;
                     }
                 }
@@ -247,7 +242,7 @@ export default {
                     background-color: blue;
                     color: #ffffff;
                     display: block;
-                    padding: 0.1rem;
+                    padding: 5px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -258,13 +253,13 @@ export default {
             }
 
             .title {
-                margin-top: 0.3rem;
-                font-size: 0.3rem;
+                margin-top: 15px;
+                font-size: 15px;
                 font-weight: bold;
             }
 
             .describe {
-                margin-top: 0.2rem;
+                margin-top: 10px;
                 overflow: hidden;
                 display: -webkit-box;
                 text-overflow: ellipsis;
