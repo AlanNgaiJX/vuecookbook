@@ -38,6 +38,10 @@ export default {
                 {
                     name: "Algorithm",
                     path: "/algorithm"
+                },
+                {
+                    name: "Echart",
+                    path: "/echart"
                 }
             ]
         };

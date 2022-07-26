@@ -8,6 +8,9 @@
                 <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/selectPosition')">
                     选址组件
                 </div>
+                 <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/districtMap')">
+                    行政地图
+                </div>
             </div>
         </template>
         <router-view></router-view>

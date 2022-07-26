@@ -226,6 +226,11 @@ const routes = [
                         meta: {
                             noCommonHead: true
                         }
+                    },
+                    {
+                        path: "/jsApi/gaodeMapApi/districtMap",
+                        name: "DistrictMap",
+                        component: () => import("../pages/JsApi/GaodeMapApi/districtMap.vue")
                     }
                 ]
             }
@@ -335,7 +340,18 @@ const routes = [
         path: "/echart",
         name: "Echart",
         component: () => import("../pages/Echart/index.vue"),
+        redirect: "/echart/list",
         children: [
+            {
+                path: "/echart/index",
+                name: "index",
+                component: () => import("../pages/Echart/index.vue")
+            },
+            {
+                path: "/echart/list",
+                name: "list",
+                component: () => import("../pages/Echart/list.vue")
+            },
             {
                 path: "/echart/map",
                 name: "map",
