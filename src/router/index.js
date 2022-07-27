@@ -231,6 +231,16 @@ const routes = [
                         path: "/jsApi/gaodeMapApi/districtMap",
                         name: "DistrictMap",
                         component: () => import("../pages/JsApi/GaodeMapApi/districtMap.vue")
+                    },
+                    {
+                        path: "/jsApi/gaodeMapApi/locaPointMap",
+                        name: "LocaPointMap",
+                        component: () => import("../pages/JsApi/GaodeMapApi/locaPointMap.vue")
+                    },
+                    {
+                        path: "/jsApi/gaodeMapApi/locaDistrictMap",
+                        name: "LocaDistrictMap",
+                        component: () => import("../pages/JsApi/GaodeMapApi/locaDistrictMap.vue")
                     }
                 ]
             }

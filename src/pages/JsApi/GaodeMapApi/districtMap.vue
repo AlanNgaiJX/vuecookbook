@@ -67,7 +67,8 @@ export default {
             styles: {
                 "nation-stroke": "red",
                 "province-stroke": "blue",
-                "city-stroke": "pink"
+                "city-stroke": "pink",
+                fill: "yellow"
                 // "nation-stroke": "#22ffff",
                 // "coastline-stroke": [0.85, 0.63, 0.94, 1],
                 // "province-stroke": "white",
@@ -95,6 +96,18 @@ export default {
             map.addControl(new AMap.ToolBar({ liteStyle: true }));
             document.getElementsByClassName("amap-mcode")[0].innerHTML =
                 "-GS(2020)617号、GS(2019)756号";
+
+            map.on("click", function(ev) {
+                console.log(ev);
+                // 触发事件的对象
+                var target = ev.target;
+                // 触发事件的地理坐标，AMap.LngLat 类型
+                var lnglat = ev.lnglat;
+                // 触发事件的像素坐标，AMap.Pixel 类型
+                var pixel = ev.pixel;
+                // 触发事件类型
+                var type = ev.type;
+            });
         });
     }
 };
