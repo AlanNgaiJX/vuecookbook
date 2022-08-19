@@ -21,28 +21,32 @@ export default {
                     path: "/hearth/bubbleZoom"
                 },
                 {
-                    name:"研究nextTick和setTimeOut",
-                    path: "/hearth/examNextTick" 
+                    name: "研究nextTick和setTimeOut",
+                    path: "/hearth/examNextTick"
                 },
                 {
-                    name:"grid布局",
-                    path:"/hearth/gridLayout"
+                    name: "grid布局",
+                    path: "/hearth/gridLayout"
                 },
                 {
-                    name:"弹性grid布局",
-                    path:"/hearth/flexibleGrid"
+                    name: "弹性grid布局",
+                    path: "/hearth/flexibleGrid"
                 },
                 {
-                    name:"水-进度条",
-                    path:"/hearth/waterProgress"
+                    name: "水-进度条",
+                    path: "/hearth/waterProgress"
                 },
                 {
-                    name:"三角形",
-                    path:"/hearth/triangle"
+                    name: "三角形",
+                    path: "/hearth/triangle"
                 },
                 {
-                    name:"scoped",
-                    path:"/hearth/scoped"
+                    name: "scoped",
+                    path: "/hearth/scoped"
+                },
+                {
+                    name: "纯css饼图",
+                    path: "/hearth/pieChartCss"
                 }
             ]
         };

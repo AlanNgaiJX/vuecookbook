@@ -1,6 +1,6 @@
 <template>
     <div class="district-map">
-        <div id="container" class="map" tabindex="0"></div>
+        <div id="container"  tabindex="0"></div>
     </div>
 </template>
 

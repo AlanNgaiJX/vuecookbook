@@ -1,6 +1,6 @@
 <template>
     <div id="home" class="global-router-list">
-        <h1 class="bigTitle">Home</h1>
+        <h1 class="bigTitle" @click="test">Home</h1>
         <ul class="list">
             <li v-for="(item, index) in list" :key="index" @click="routeTo(item.path)">
                 <span v-text="index + 1 + '.'" class="num"></span
@@ -51,6 +51,9 @@ export default {
             this.$router.push({
                 path
             });
+        },
+        test(){
+            console.log("hello world");
         }
     }
 };

@@ -190,6 +190,11 @@ const routes = [
                 path: "/hearth/scoped",
                 name: "Scoped",
                 component: Scoped
+            },
+            {
+                path: "/hearth/pieChartCss",
+                name: "PieChartCss",
+                component: () => import("@/pages/Hearth/PieChartCss.vue")
             }
         ]
     },

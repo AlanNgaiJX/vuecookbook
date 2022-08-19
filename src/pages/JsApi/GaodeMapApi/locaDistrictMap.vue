@@ -38,14 +38,16 @@ export default {
             mapStyle: "amap://styles/db9efe6a1745ac24b7269b862f359536",
             viewMode: "3D",
             features: ["bg", "road"],
-            center: [107.4976, 32.1697],
-            zoom: 4
+            // center: [107.4976, 32.1697],
+            zoom: 3,
+            // zooms: [3, 18]
         });
 
         var infoWin;
 
         infoWin = new AMap.InfoWindow({
             closeWhenClickMap: true
+            // offset: new AMap.Pixel(0, -100) 偏移
         });
 
         this.infoWin = _infoWin = infoWin;
@@ -83,7 +85,7 @@ export default {
             infoWin.setContent(content.join(""));
         });
 
-        axios.get("//a.amap.com/Loca/static/mock/tourist_attractions.csv").then(res => {
+        axios.get("https://alanngai1996.xyz/temp/test1.csv").then(res => {
             vLayer.setData(res.data, {
                 type: "csv",
                 lnglat: "经纬度",
@@ -100,7 +102,18 @@ export default {
                         "#7fcdbb",
                         "#c7e9b4",
                         "#ffffcc"
-                    ]
+                    ],
+                    text: {
+                        content: obj => {
+                            return obj.value.subFeature.properties.name;
+                        }, // 文字内容
+                        direction: "center", // 文字方位
+                        offset: [10, -10], // 偏移大小
+                        fontSize: 16, // 文字大小
+                        fillColor: "#E67E22", //文字颜色
+                        strokeColor: "rgba(255,255,255,0.85)", // 文字描边颜色
+                        strokeWidth: 1 // 文字描边宽度
+                    }
                 },
                 selectStyle: false
             });
@@ -115,9 +128,10 @@ export default {
     #container {
         height: 100vh;
         width: 100%;
+        // margin: 100px;
     }
 
-    .button{
+    .button {
         position: fixed;
         bottom: 0;
         right: 0;
