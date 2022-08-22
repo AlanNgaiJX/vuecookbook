@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TestComp from "@/components/cookbook/keepAliveTest/testComp.vue";
+import TestComp from "./TestComp.vue";
 
 export default {
     name: "KeepAliveTest",

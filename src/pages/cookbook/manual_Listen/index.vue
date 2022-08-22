@@ -46,9 +46,9 @@
 </template>
 
 <script>
-import Send from "@/components/cookbook/manualListen/send.vue";
-import BroA from "@/components/cookbook/manualListen/broA.vue";
-import BroB from "@/components/cookbook/manualListen/broB.vue";
+import Send from "./Send.vue";
+import BroA from "./BroA.vue";
+import BroB from "./BroB.vue";
 
 export default {
     name: "ManualListen",

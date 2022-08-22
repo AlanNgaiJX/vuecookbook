@@ -2,21 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-// import CookbookIndex from "@/pages/Cookbook/CookbookIndex.vue";
-// import CookbookList from "@/pages/Cookbook/CookbookList.vue";
-// import DynamicComponents from "@/pages/Cookbook/DynamicComponents.vue";
-// import AsyncComponents from "@/pages/Cookbook/AsyncComponents.vue";
-// import ManualListen from "@/pages/Cookbook/ManualListen.vue";
-// import StaticProb from "@/pages/Cookbook/StaticProb.vue";
-// import RecursionComponents from "@/pages/Cookbook/RecursionComponents.vue";
-// import Slot from "@/pages/Cookbook/Slot.vue";
-// import Transition from "@/pages/Cookbook/Transition.vue";
-// import KeepAliveTest from "@/pages/Cookbook/KeepAliveTest.vue";
-// import NavGuard from "@/pages/Cookbook/NavGuard.vue";
-// import NavA from "@/components/cookbook/navGuard/navA.vue";
-// import NavB from "@/components/cookbook/navGuard/navB.vue";
-// import NavC from "@/components/cookbook/navGuard/navC.vue";
-
 import HearthIndex from "@/pages/Hearth/HearthIndex.vue";
 import HearthList from "@/pages/Hearth/HearthList.vue";
 import BubbleZoom from "@/pages/Hearth/BubbleZoom.vue";
@@ -125,50 +110,26 @@ const routes = [
                     {
                         path: "/cookbook/navGuard/a",
                         name: "a",
-                        component: () => import("@/pages/cookbook/nav-guard/"),
+                        component: () => import("@/pages/cookbook/nav-guard/navA.vue"),
                         beforeEnter(to, from, next) {
                             console.log("**** beforeEnter ****");
                             next();
                         }
+                    },
+                    {
+                        path: "/cookbook/navGuard/a",
+                        name: "b",
+                        component: () => import("@/pages/cookbook/nav-guard/navB.vue")
+                    },
+                    {
+                        path: "/cookbook/navGuard/a",
+                        name: "c",
+                        component: () => import("@/pages/cookbook/nav-guard/navC.vue")
                     }
                 ]
             }
         ]
     },
-    // {
-    //     path: "/cookbook",
-    //     name: "Cookbook",
-    //     component: CookbookIndex,
-    //     redirect: "/cookbook/cookbookList",
-    //     children: [
-    //         {
-    //             path: "/cookbook/navGuard",
-    //             name: "NavGuard",
-    //             component: NavGuard,
-    //             children: [
-    //                 {
-    //                     path: "/cookbook/navGuard/a",
-    //                     name: "a",
-    //                     component: NavA,
-    //                     beforeEnter(to, from, next) {
-    //                         console.log("**** beforeEnter ****");
-    //                         next();
-    //                     }
-    //                 },
-    //                 {
-    //                     path: "/cookbook/navGuard/b",
-    //                     name: "b",
-    //                     component: NavB
-    //                 },
-    //                 {
-    //                     path: "/cookbook/navGuard/c",
-    //                     name: "c",
-    //                     component: NavC
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
     {
         path: "/hearth",
         name: "Hearth",

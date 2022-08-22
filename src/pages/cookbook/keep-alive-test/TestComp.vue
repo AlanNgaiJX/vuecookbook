@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import TestComp2 from './testComp1.vue';
+import TestComp2 from './TestComp1.vue';
 
 export default {
     name: "testComp",

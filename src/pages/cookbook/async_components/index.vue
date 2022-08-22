@@ -22,16 +22,16 @@
 </template>
 
 <script>
-import Loading from "@/components/cookbook/asyncComponents/loading.vue";
-import Error from "@/components/cookbook/asyncComponents/error.vue";
+import Loading from "./Loading.vue";
+import Error from "./Error.vue";
 
 // 方式一，利用import返回一个promise
-const ComA = () => import("@/components/cookbook/asyncComponents/comA.vue");
+const ComA = () => import("./ComA.vue");
 
 // 方式二，自己用require包装个promise
 const ComB = function() {
     return new Promise((resolve, reject) => {
-        require(["@/components/cookbook/asyncComponents/comB.vue"], resolve);
+        require(["./ComB.vue"], resolve);
     });
 };
 
@@ -39,7 +39,7 @@ const ComC = function() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             //模拟网络延迟, 尝试调整这里查看loading和error状态
-            require(["@/components/cookbook/asyncComponents/comC.vue"], resolve);
+            require(["./ComC.vue"], resolve);
         }, 1000);
     });
 };

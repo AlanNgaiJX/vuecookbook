@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import bus from "@/components/cookbook/manualListen/broBus.js";
+import bus from "./broBus.js";
 export default {
     methods:{
         send(){

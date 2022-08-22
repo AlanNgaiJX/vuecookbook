@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import ComA from "@/components/cookbook/recursionComponents/comA.vue";
-import comSelf from "@/components/cookbook/recursionComponents/comSelf.vue";
+import ComA from "./ComA.vue";
+import comSelf from "./ComSelf.vue";
 
 export default {
     name: "RecursionComponents",

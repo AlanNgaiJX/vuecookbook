@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import ComA from "@/components/cookbook/staticProb/comA.vue";
+import ComA from "./ComA.vue";
 
 export default {
     name: "StaticProb",

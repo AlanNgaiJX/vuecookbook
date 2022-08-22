@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import ComA from "@/components/cookbook/slot/comA.vue";
-import ComBody from "@/components/cookbook/slot/comBody.vue";
+import ComA from "./ComA.vue";
+import ComBody from "./ComBody.vue";
 
 export default {
     name: "SlotPage",

@@ -25,14 +25,12 @@
 </template>
 
 <script>
-import FixedScrollView from "@/components/common/fixedScrollView.vue";
-import TabA from "@/components/cookbook/dynamicComponents/tabA.vue";
-import TabB from "@/components/cookbook/dynamicComponents/tabB.vue";
+import TabA from "./TabA.vue";
+import TabB from "./TabB.vue";
 
 export default {
     name: "DynamicComponents",
     components: {
-        FixedScrollView,
         TabA,
         TabB
     },

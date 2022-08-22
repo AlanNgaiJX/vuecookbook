@@ -11,7 +11,7 @@ export default {
 
     // 异步声明
     components:{
-        ComB: () => import('@/components/cookbook/recursionComponents/comB.vue')
+        ComB: () => import('./ComB.vue')
     },
 
     // 或

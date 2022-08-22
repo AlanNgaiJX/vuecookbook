@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ComA from "@/components/cookbook/recursionComponents/comA.vue";
+import ComA from "./ComA.vue";
 export default {
     name:"ComB",
     components:{
