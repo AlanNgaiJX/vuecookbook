@@ -2,15 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-import HearthIndex from "@/pages/Hearth/HearthIndex.vue";
-import HearthList from "@/pages/Hearth/HearthList.vue";
-import BubbleZoom from "@/pages/Hearth/BubbleZoom.vue";
-import ExamNextTick from "@/pages/Hearth/ExamNextTick.vue";
-import GridLayout from "@/pages/Hearth/GridLayout.vue";
-import WaterProgress from "@/pages/Hearth/WaterProgress.vue";
-import Triangle from "@/pages/Hearth/Triangle.vue";
-import Scoped from "@/pages/Hearth/Scoped.vue";
-
 import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
 import JsApiList from "@/pages/JsApi/JsApiList.vue";
 import WebAudioApi from "@/pages/JsApi/WebAudioApi.vue";
@@ -132,55 +123,55 @@ const routes = [
     },
     {
         path: "/hearth",
-        name: "Hearth",
-        component: HearthIndex,
-        redirect: "/hearth/hearthList",
+        name: "hearth",
+        component: ()=> import("@/pages/hearth/index.vue"),
+        redirect: "/hearth/list",
         children: [
             {
-                path: "/hearth/hearthList",
-                name: "HearthList",
-                component: HearthList
+                path: "/hearth/list",
+                name: "list",
+                component: ()=> import("@/pages/hearth/list.vue"),
             },
             {
-                path: "/hearth/bubbleZoom",
-                name: "BubbleZoom",
-                component: BubbleZoom
+                path: "/hearth/bubble_zoom",
+                name: "bubble_zoom",
+                component: ()=> import("@/pages/hearth/bubble_zoom/index.vue"),
             },
             {
-                path: "/hearth/examNextTick",
-                name: "ExamNextTick",
-                component: ExamNextTick
+                path: "/hearth/exam_next_tick",
+                name: "exam_next_tick",
+                component: ()=> import("@/pages/hearth/exam_next_tick/index.vue"),
             },
             {
-                path: "/hearth/gridLayout",
-                name: "GridLayout",
-                component: GridLayout
+                path: "/hearth/grid_layout",
+                name: "grid_layout",
+                component: ()=> import("@/pages/hearth/grid_layout/index.vue"),
             },
             {
-                path: "/hearth/flexibleGrid",
-                name: "FlexibleGrid",
-                component: () => import("@/pages/Hearth/flexibleGrid.vue")
+                path: "/hearth/flexible_grid",
+                name: "flexible_grid",
+                component: ()=> import("@/pages/hearth/flexible_grid/index.vue"),
             },
             {
-                path: "/hearth/waterProgress",
-                name: "WaterProgress",
-                component: WaterProgress
+                path: "/hearth/water_progress",
+                name: "water_progress",
+                component: ()=> import("@/pages/hearth/water_progress/index.vue"),
             },
             {
                 path: "/hearth/triangle",
-                name: "Triangle",
-                component: Triangle
+                name: "triangle",
+                component: ()=> import("@/pages/hearth/triangle/index.vue"),
             },
             {
                 path: "/hearth/scoped",
-                name: "Scoped",
-                component: Scoped
+                name: "scoped",
+                component: ()=> import("@/pages/hearth/scoped/index.vue"),
             },
             {
-                path: "/hearth/pieChartCss",
-                name: "PieChartCss",
-                component: () => import("@/pages/Hearth/PieChartCss.vue")
-            }
+                path: "/hearth/pie_chart_css",
+                name: "pie_chart_css",
+                component: ()=> import("@/pages/hearth/pie_chart_css/index.vue"),
+            },
         ]
     },
     {
