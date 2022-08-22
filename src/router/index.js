@@ -391,9 +391,9 @@ const routes = [
                 component: () => import("../pages/other_demo/ListPage.vue")
             },
             {
-                path: "/other_demo/poster_make_v1",
-                name: "poster_make_v1",
-                component: () => import("../pages/other_demo/posterMakeV1/index.vue")
+                path: "/other_demo/poster_make",
+                name: "poster_make",
+                component: () => import("../pages/other_demo/poster_make/index.vue")
             }
         ]
     }

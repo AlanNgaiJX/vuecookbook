@@ -17,12 +17,8 @@ export default {
         return {
             list: [
                 {
-                    name: "海报生成 v1",
-                    path: "/other_demo/poster_make_v1"
-                },
-                {
-                    name: "海报生成 v1",
-                    path: "/other_demo/poster_make_v2"
+                    name: "海报生成",
+                    path: "/other_demo/poster_make"
                 }
             ]
         };
