@@ -1,6 +1,6 @@
 <template>
-    <div id="JsApiList" class="global-router-list">
-        <h1 class="bigTitle">JsApi</h1>
+    <div id="list-page" class="global-router-list">
+        <h1 class="bigTitle">Other Demo</h1>
         <ul class="list">
             <li v-for="(item, index) in list" :key="index" @click="routeTo(item.path)">
                 <span v-text="index + 1 + '.'" class="num"></span
@@ -12,21 +12,17 @@
 
 <script>
 export default {
-    name: "JsApiList",
+    name: "list-page",
     data() {
         return {
             list: [
                 {
-                    name: "WebAudioApi",
-                    path: "/jsApi/webAudioApi"
+                    name: "海报生成 v1",
+                    path: "/other_demo/poster_make_v1"
                 },
                 {
-                    name: "GaodeMapApi",
-                    path: "/jsApi/gaodeMapApi"
-                },
-                {
-                    name: "ColorThief",
-                    path: "/jsApi/colorThief"
+                    name: "海报生成 v1",
+                    path: "/other_demo/poster_make_v2"
                 }
             ]
         };

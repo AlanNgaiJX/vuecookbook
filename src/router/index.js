@@ -246,6 +246,11 @@ const routes = [
                         path: "/jsApi/gaodeMapApi/locaDistrictMap",
                         name: "LocaDistrictMap",
                         component: () => import("../pages/JsApi/GaodeMapApi/locaDistrictMap.vue")
+                    },
+                    {
+                        path: "/jsApi/colorThief",
+                        name: "colorThief",
+                        component: () => import("../pages/JsApi/ColorThief.vue")
                     }
                 ]
             }
@@ -371,6 +376,24 @@ const routes = [
                 path: "/echart/map",
                 name: "map",
                 component: () => import("../pages/Echart/map.vue")
+            }
+        ]
+    },
+    {
+        path: "/other_demo",
+        name: "OtherDemo",
+        component: () => import("../pages/other_demo/index.vue"),
+        redirect: "/other_demo/list_page",
+        children: [
+            {
+                path: "/other_demo/list_page",
+                name: "listPage",
+                component: () => import("../pages/other_demo/ListPage.vue")
+            },
+            {
+                path: "/other_demo/poster_make_v1",
+                name: "poster_make_v1",
+                component: () => import("../pages/other_demo/posterMakeV1/index.vue")
             }
         ]
     }

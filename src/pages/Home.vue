@@ -42,6 +42,10 @@ export default {
                 {
                     name: "Echart",
                     path: "/echart"
+                },
+                {
+                    name: "Other Demo",
+                    path: "/other_demo"
                 }
             ]
         };
