@@ -18,23 +18,23 @@ export default {
             list: [
                 {
                     name: "动态组件",
-                    path: "/cookbook/dynamicComponents"
+                    path: "/cookbook/dynamic_components"
                 },
                 {
                     name: "异步组件",
-                    path: "/cookbook/asyncComponents"
+                    path: "/cookbook/async_components"
                 },
                 {
-                    name: "$on，$off，$once",
-                    path: "/cookbook/manualListen"
+                    name: "手动监听，$on，$off，$once",
+                    path: "/cookbook/manual_Listen"
                 },
                 {
                     name: "组件静态传参",
-                    path: "/cookbook/staticProb"
+                    path: "/cookbook/static_prob"
                 },
                 {
                     name: "递归组件",
-                    path: "/cookbook/recursionComponents"
+                    path: "/cookbook/recursion_components"
                 },
                 {
                     name: "插槽",
@@ -46,11 +46,11 @@ export default {
                 },
                 {
                     name: "keep-alive",
-                    path: "/cookbook/keepAliveTest"
+                    path: "/cookbook/keep-alive-test"
                 },
                 {
                     name: "导航守卫",
-                    path: "/cookbook/navGuard"
+                    path: "/cookbook/nav-guard"
                 }
             ]
         };
