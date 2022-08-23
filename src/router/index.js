@@ -2,12 +2,12 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
-import JsApiList from "@/pages/JsApi/JsApiList.vue";
-import WebAudioApi from "@/pages/JsApi/WebAudioApi.vue";
-import GaodeMapApi from "@/pages/JsApi/GaodeMapApi/index.vue";
-import BasicMap from "@/pages/JsApi/GaodeMapApi/BasicMap.vue";
-import SelectPosition from "@/pages/JsApi/GaodeMapApi/SelectPosition.vue";
+// import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
+// import JsApiList from "@/pages/JsApi/JsApiList.vue";
+// import WebAudioApi from "@/pages/JsApi/WebAudioApi.vue";
+// import GaodeMapApi from "@/pages/JsApi/GaodeMapApi/index.vue";
+// import BasicMap from "@/pages/JsApi/GaodeMapApi/BasicMap.vue";
+// import SelectPosition from "@/pages/JsApi/GaodeMapApi/SelectPosition.vue";
 
 import ServiceApiIndex from "@/pages/ServiceApi/ServiceApiIndex.vue";
 import ServiceApiList from "@/pages/ServiceApi/ServiceApiList.vue";
@@ -124,112 +124,109 @@ const routes = [
     {
         path: "/hearth",
         name: "hearth",
-        component: ()=> import("@/pages/hearth/index.vue"),
+        component: () => import("@/pages/hearth/index.vue"),
         redirect: "/hearth/list",
         children: [
             {
                 path: "/hearth/list",
                 name: "list",
-                component: ()=> import("@/pages/hearth/list.vue"),
+                component: () => import("@/pages/hearth/list.vue")
             },
             {
                 path: "/hearth/bubble_zoom",
                 name: "bubble_zoom",
-                component: ()=> import("@/pages/hearth/bubble_zoom/index.vue"),
+                component: () => import("@/pages/hearth/bubble_zoom/index.vue")
             },
             {
                 path: "/hearth/exam_next_tick",
                 name: "exam_next_tick",
-                component: ()=> import("@/pages/hearth/exam_next_tick/index.vue"),
+                component: () => import("@/pages/hearth/exam_next_tick/index.vue")
             },
             {
                 path: "/hearth/grid_layout",
                 name: "grid_layout",
-                component: ()=> import("@/pages/hearth/grid_layout/index.vue"),
+                component: () => import("@/pages/hearth/grid_layout/index.vue")
             },
             {
                 path: "/hearth/flexible_grid",
                 name: "flexible_grid",
-                component: ()=> import("@/pages/hearth/flexible_grid/index.vue"),
+                component: () => import("@/pages/hearth/flexible_grid/index.vue")
             },
             {
                 path: "/hearth/water_progress",
                 name: "water_progress",
-                component: ()=> import("@/pages/hearth/water_progress/index.vue"),
+                component: () => import("@/pages/hearth/water_progress/index.vue")
             },
             {
                 path: "/hearth/triangle",
                 name: "triangle",
-                component: ()=> import("@/pages/hearth/triangle/index.vue"),
+                component: () => import("@/pages/hearth/triangle/index.vue")
             },
             {
                 path: "/hearth/scoped",
                 name: "scoped",
-                component: ()=> import("@/pages/hearth/scoped/index.vue"),
+                component: () => import("@/pages/hearth/scoped/index.vue")
             },
             {
                 path: "/hearth/pie_chart_css",
                 name: "pie_chart_css",
-                component: ()=> import("@/pages/hearth/pie_chart_css/index.vue"),
-            },
+                component: () => import("@/pages/hearth/pie_chart_css/index.vue")
+            }
         ]
     },
     {
-        path: "/jsApi",
-        name: "JsApi",
-        component: JsApiIndex,
-        redirect: "/jsApi/jsApiList",
+        path: "/js_api",
+        name: "js_api",
+        component: () => import("@/pages/js_api/index.vue"),
+        redirect: "/js_api/list",
         children: [
             {
-                path: "/jsApi/jsApiList",
-                name: "JsApiList",
-                component: JsApiList
+                path: "/js_api/list",
+                name: "list",
+                component: () => import("@/pages/js_api/list.vue")
             },
             {
-                path: "/jsApi/webAudioApi",
-                name: "WebAudioApi",
-                component: WebAudioApi
+                path: "/js_api/web_audio_api",
+                name: "web_audio_api",
+                component: () => import("@/pages/js_api/web_audio_api/index.vue")
             },
             {
-                path: "/jsApi/gaodeMapApi",
-                name: "GaodeMapApi",
-                component: GaodeMapApi,
+                path: "/js_api/gaode_map_api",
+                name: "gaode_map_api",
+                component: () => import("@/pages/js_api/gaode_map_api/index.vue"),
                 children: [
                     {
-                        path: "/jsApi/gaodeMapApi/basicMap",
+                        path: "/js_api/gaode_map_api/basicMap",
                         name: "BasicMap",
-                        component: BasicMap
+                        component: () => import("@/pages/js_api/gaode_map_api/BasicMap.vue")
                     },
                     {
-                        path: "/jsApi/gaodeMapApi/selectPosition",
-                        name: "SelectPosition",
-                        component: SelectPosition,
-                        meta: {
-                            noCommonHead: true
-                        }
+                        path: "/js_api/gaode_map_api/selectPosition",
+                        name: "selectPosition",
+                        component: () => import("@/pages/js_api/gaode_map_api/SelectPosition.vue")
                     },
                     {
-                        path: "/jsApi/gaodeMapApi/districtMap",
-                        name: "DistrictMap",
-                        component: () => import("../pages/JsApi/GaodeMapApi/districtMap.vue")
+                        path: "/js_api/gaode_map_api/districtMap",
+                        name: "districtMap",
+                        component: () => import("@/pages/js_api/gaode_map_api/districtMap.vue")
                     },
                     {
-                        path: "/jsApi/gaodeMapApi/locaPointMap",
-                        name: "LocaPointMap",
-                        component: () => import("../pages/JsApi/GaodeMapApi/locaPointMap.vue")
+                        path: "/js_api/gaode_map_api/locaDistrictMap",
+                        name: "locaDistrictMap",
+                        component: () => import("@/pages/js_api/gaode_map_api/locaDistrictMap.vue")
                     },
                     {
-                        path: "/jsApi/gaodeMapApi/locaDistrictMap",
-                        name: "LocaDistrictMap",
-                        component: () => import("../pages/JsApi/GaodeMapApi/locaDistrictMap.vue")
-                    },
-                    {
-                        path: "/jsApi/colorThief",
-                        name: "colorThief",
-                        component: () => import("../pages/JsApi/ColorThief.vue")
+                        path: "/js_api/gaode_map_api/locaPointMap",
+                        name: "locaPointMap",
+                        component: () => import("@/pages/js_api/gaode_map_api/locaPointMap.vue")
                     }
                 ]
-            }
+            },
+            {
+                path: "/js_api/colorthief",
+                name: "colorthief",
+                component: () => import("@/pages/js_api/colorthief/index.vue")
+            },
         ]
     },
     {

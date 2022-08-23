@@ -16,16 +16,16 @@ export default {
         return {
             list: [
                 {
-                    name: "Cookbook",
+                    name: "cookbook",
                     path: "/cookbook"
                 },
                 {
-                    name: "Hearth",
+                    name: "hearth",
                     path: "/hearth"
                 },
                 {
-                    name: "JsApi",
-                    path: "/jsApi"
+                    name: "js_api",
+                    path: "/js_api"
                 },
                 {
                     name: "ServiceApi",

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import TestWebAudio from "@/components/jsApi/testWebAudio.vue";
+import TestWebAudio from "./testWebAudio.vue";
 export default {
     name: "webAudioApi",
     components: {

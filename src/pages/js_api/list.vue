@@ -17,16 +17,16 @@ export default {
         return {
             list: [
                 {
-                    name: "WebAudioApi",
-                    path: "/jsApi/webAudioApi"
+                    name: "web_audio_api",
+                    path: "/js_api/web_audio_api"
                 },
                 {
-                    name: "GaodeMapApi",
-                    path: "/jsApi/gaodeMapApi"
+                    name: "gaode_map_api",
+                    path: "/js_api/gaode_map_api"
                 },
                 {
-                    name: "ColorThief",
-                    path: "/jsApi/colorThief"
+                    name: "Colorthief",
+                    path: "/js_api/colorthief"
                 }
             ]
         };

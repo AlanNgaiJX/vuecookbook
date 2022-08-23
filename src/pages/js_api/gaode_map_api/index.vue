@@ -1,20 +1,20 @@
 <template>
     <div id="gaodeMapApi">
-        <template v-if="$route.path === '/jsApi/gaodeMapApi'">
+        <template v-if="$route.path === '/js_api/gaode_map_api'">
             <div class="exp-list">
-                <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/basicMap')">
+                <div class="exp-item" @click="routeTo('/js_api/gaode_map_api/basicMap')">
                     基础地图
                 </div>
-                <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/selectPosition')">
+                <div class="exp-item" @click="routeTo('/js_api/gaode_map_api/selectPosition')">
                     选址组件
                 </div>
-                <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/districtMap')">
+                <div class="exp-item" @click="routeTo('/js_api/gaode_map_api/districtMap')">
                     行政地图
                 </div>
-                <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/locaDistrictMap')">
+                <div class="exp-item" @click="routeTo('/js_api/gaode_map_api/locaDistrictMap')">
                     LOCA 行政地图
                 </div>
-                <div class="exp-item" @click="routeTo('/jsApi/gaodeMapApi/locaPointMap')">
+                <div class="exp-item" @click="routeTo('/js_api/gaode_map_api/locaPointMap')">
                     LOCA 点图
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default {
             key: "75d5d1cfb02ac4ccb4beb3d982897d4c", // 申请好的Web端开发者Key，首次调用 load 时必填
             // version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
             version: "1.4.15",
-            plugins: ['AMap.Scale', 'AMap.ToolBar'], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+            plugins: ['AMap.Scale', 'AMap.ToolBar', 'AMap.DistrictLayer'], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
             AMapUI: {
                 // 是否加载 AMapUI，缺省不加载
                 version: "1.1", // AMapUI 版本
