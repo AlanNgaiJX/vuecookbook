@@ -28,8 +28,8 @@ export default {
                     path: "/js_api"
                 },
                 {
-                    name: "ServiceApi",
-                    path: "/serviceApi"
+                    name: "service_api",
+                    path: "/service_api"
                 },
                 {
                     name: "Lodash",

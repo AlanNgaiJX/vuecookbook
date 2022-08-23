@@ -2,20 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-// import JsApiIndex from "@/pages/JsApi/JsApiIndex.vue";
-// import JsApiList from "@/pages/JsApi/JsApiList.vue";
-// import WebAudioApi from "@/pages/JsApi/WebAudioApi.vue";
-// import GaodeMapApi from "@/pages/JsApi/GaodeMapApi/index.vue";
-// import BasicMap from "@/pages/JsApi/GaodeMapApi/BasicMap.vue";
-// import SelectPosition from "@/pages/JsApi/GaodeMapApi/SelectPosition.vue";
-
-import ServiceApiIndex from "@/pages/ServiceApi/ServiceApiIndex.vue";
-import ServiceApiList from "@/pages/ServiceApi/ServiceApiList.vue";
-import YoudaoOcrApi from "@/pages/ServiceApi/YoudaoOcrApi.vue";
-import GetExifData from "@/pages/ServiceApi/GetExifData.vue";
-import NewGetExifData from "@/pages/ServiceApi/newGetExifData.vue";
-import JuejinSearch from "@/pages/ServiceApi/JuejinSearch.vue";
-
 import LodashIndex from "@/pages/Lodash/LodashIndex.vue";
 import LodashList from "@/pages/Lodash/LodashList.vue";
 import Debounce from "@/pages/Lodash/Debounce.vue";
@@ -226,39 +212,39 @@ const routes = [
                 path: "/js_api/colorthief",
                 name: "colorthief",
                 component: () => import("@/pages/js_api/colorthief/index.vue")
-            },
+            }
         ]
     },
     {
-        path: "/serviceApi",
-        name: "ServiceApi",
-        component: ServiceApiIndex,
-        redirect: "/serviceApi/serviceApiList",
+        path: "/service_api",
+        name: "service_api",
+        component: () => import("@/pages/service_api/index.vue"),
+        redirect: "/service_api/list",
         children: [
             {
-                path: "/serviceApi/serviceApiList",
-                name: "ServiceApiList",
-                component: ServiceApiList
+                path: "/service_api/list",
+                name: "list",
+                component: () => import("@/pages/service_api/list.vue")
             },
             {
-                path: "/serviceApi/youdaoOcrApi",
-                name: "YoudaoOcrApi",
-                component: YoudaoOcrApi
+                path: "/service_api/youdao_ocr_api",
+                name: "youdao_ocr_api",
+                component: () => import("@/pages/service_api/youdao_ocr_api/index.vue")
             },
             {
-                path: "/serviceApi/getExifData",
-                name: "GetExifData",
-                component: GetExifData
+                path: "/service_api/get_exif_data",
+                name: "get_exif_data",
+                component: () => import("@/pages/service_api/get_exif_data/index.vue")
             },
             {
-                path: "/serviceApi/newGetExifData",
-                name: "NewGetExifData",
-                component: NewGetExifData
+                path: "/service_api/new_get_exif_data",
+                name: "new_get_exif_data",
+                component: () => import("@/pages/service_api/new_get_exif_data/index.vue")
             },
             {
-                path: "/serviceApi/juejinSearch",
-                name: "JuejinSearch",
-                component: JuejinSearch
+                path: "/service_api/juejin_search",
+                name: "juejin_search",
+                component: () => import("@/pages/service_api/juejin_search/index.vue")
             }
         ]
     },
