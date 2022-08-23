@@ -40,7 +40,7 @@ export default {
                     path: "/algorithm"
                 },
                 {
-                    name: "Echart",
+                    name: "echart",
                     path: "/echart"
                 },
                 {

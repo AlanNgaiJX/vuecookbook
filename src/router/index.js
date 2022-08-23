@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
-
 import refreshListHelper from "./refreshListHelper";
 
 Vue.use(VueRouter);
@@ -306,24 +305,24 @@ const routes = [
     },
     {
         path: "/echart",
-        name: "Echart",
-        component: () => import("../pages/Echart/index.vue"),
+        name: "echart",
+        component: () => import("../pages/echart/index.vue"),
         redirect: "/echart/list",
         children: [
             {
                 path: "/echart/index",
                 name: "index",
-                component: () => import("../pages/Echart/index.vue")
+                component: () => import("../pages/echart/index.vue")
             },
             {
                 path: "/echart/list",
                 name: "list",
-                component: () => import("../pages/Echart/list.vue")
+                component: () => import("../pages/echart/list.vue")
             },
             {
                 path: "/echart/map",
                 name: "map",
-                component: () => import("../pages/Echart/map.vue")
+                component: () => import("../pages/echart/map/index.vue")
             }
         ]
     },
