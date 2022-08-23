@@ -2,8 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-import KeepAliveRefreshIndex from "@/pages/keepAliveRefresh/KeepAliveRefreshIndex.vue";
-
 import refreshListHelper from "./refreshListHelper";
 
 Vue.use(VueRouter);
@@ -281,28 +279,28 @@ const routes = [
         ]
     },
     {
-        path: "/keepAliveRefresh",
-        name: "KeepAliveRefresh",
-        component: KeepAliveRefreshIndex,
-        redirect: "/keepAliveRefresh/index",
+        path: "/keep_alive_refresh",
+        name: "keep_alive_refresh",
+        component: () => import("@/pages/keep_alive_refresh/index.vue"),
+        redirect: "/keep_alive_refresh/module_index",
         children: [
             {
-                path: "/keepAliveRefresh/index",
+                path: "/keep_alive_refresh/module_index",
                 name: "index",
-                component: () => import("../pages/keepAliveRefresh/index.vue")
+                component: () => import("../pages/keep_alive_refresh/module_index.vue")
             },
             {
-                path: "/keepAliveRefresh/list",
-                name: "list",
-                component: () => import("../pages/keepAliveRefresh/list.vue"),
+                path: "/keep_alive_refresh/list",
+                name: "keep_alive_refresh_list",
+                component: () => import("../pages/keep_alive_refresh/list.vue"),
                 meta: {
                     keepAlive: true
                 }
             },
             {
-                path: "/keepAliveRefresh/detail",
+                path: "/keep_alive_refresh/detail",
                 name: "detail",
-                component: () => import("../pages/keepAliveRefresh/detail.vue")
+                component: () => import("../pages/keep_alive_refresh/detail.vue")
             }
         ]
     },

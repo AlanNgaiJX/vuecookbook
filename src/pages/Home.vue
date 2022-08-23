@@ -44,7 +44,11 @@ export default {
                     path: "/echart"
                 },
                 {
-                    name: "Other Demo",
+                    name: "keep_alive_refresh",
+                    path: "/keep_alive_refresh"
+                },
+                {
+                    name: "other_demo",
                     path: "/other_demo"
                 }
             ]
