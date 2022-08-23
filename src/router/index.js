@@ -2,10 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-import LodashIndex from "@/pages/Lodash/LodashIndex.vue";
-import LodashList from "@/pages/Lodash/LodashList.vue";
-import Debounce from "@/pages/Lodash/Debounce.vue";
-
 import AlgorithmIndex from "@/pages/Algorithm/AlgorithmIndex.vue";
 import AlgorithmList from "@/pages/Algorithm/AlgorithmList.vue";
 import DFS from "@/pages/Algorithm/DFS.vue";
@@ -250,19 +246,19 @@ const routes = [
     },
     {
         path: "/lodash",
-        name: "Lodash",
-        component: LodashIndex,
-        redirect: "/lodash/lodashList",
+        name: "lodash",
+        component: () => import("@/pages/lodash/index.vue"),
+        redirect: "/lodash/list",
         children: [
             {
-                path: "/lodash/lodashList",
-                name: "LodashList",
-                component: LodashList
+                path: "/lodash/list",
+                name: "list",
+                component: () => import("@/pages/lodash/list.vue")
             },
             {
                 path: "/lodash/debounce",
-                name: "Debounce",
-                component: Debounce
+                name: "debounce",
+                component: () => import("@/pages/lodash/debounce/index.vue")
             }
         ]
     },

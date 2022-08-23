@@ -32,7 +32,7 @@ export default {
                     path: "/service_api"
                 },
                 {
-                    name: "Lodash",
+                    name: "lodash",
                     path: "/lodash"
                 },
                 {
