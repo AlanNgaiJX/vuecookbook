@@ -36,7 +36,7 @@ export default {
                     path: "/lodash"
                 },
                 {
-                    name: "Algorithm",
+                    name: "algorithm",
                     path: "/algorithm"
                 },
                 {
@@ -56,11 +56,14 @@ export default {
                 path
             });
         },
-        test(){
+        test() {
             console.log("hello world");
         }
     }
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#home {
+}
+</style>

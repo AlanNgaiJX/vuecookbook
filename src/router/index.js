@@ -2,11 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/pages/Home.vue";
 
-import AlgorithmIndex from "@/pages/Algorithm/AlgorithmIndex.vue";
-import AlgorithmList from "@/pages/Algorithm/AlgorithmList.vue";
-import DFS from "@/pages/Algorithm/DFS.vue";
-import BFS from "@/pages/Algorithm/BFS.vue";
-
 import KeepAliveRefreshIndex from "@/pages/keepAliveRefresh/KeepAliveRefreshIndex.vue";
 
 import refreshListHelper from "./refreshListHelper";
@@ -32,7 +27,7 @@ const routes = [
         children: [
             {
                 path: "/cookbook/list",
-                name: "list",
+                name: "cookbook_list",
                 component: () => import("@/pages/cookbook/list.vue")
             },
             {
@@ -111,7 +106,7 @@ const routes = [
         children: [
             {
                 path: "/hearth/list",
-                name: "list",
+                name: "hearth_list",
                 component: () => import("@/pages/hearth/list.vue")
             },
             {
@@ -164,7 +159,7 @@ const routes = [
         children: [
             {
                 path: "/js_api/list",
-                name: "list",
+                name: "js_api_list",
                 component: () => import("@/pages/js_api/list.vue")
             },
             {
@@ -219,7 +214,7 @@ const routes = [
         children: [
             {
                 path: "/service_api/list",
-                name: "list",
+                name: "service_api_list",
                 component: () => import("@/pages/service_api/list.vue")
             },
             {
@@ -252,7 +247,7 @@ const routes = [
         children: [
             {
                 path: "/lodash/list",
-                name: "list",
+                name: "lodash_list",
                 component: () => import("@/pages/lodash/list.vue")
             },
             {
@@ -264,24 +259,24 @@ const routes = [
     },
     {
         path: "/algorithm",
-        name: "Algorithm",
-        component: AlgorithmIndex,
-        redirect: "/algorithm/algorithmList",
+        name: "algorithm",
+        component: () => import("@/pages/algorithm/index.vue"),
+        redirect: "/algorithm/list",
         children: [
             {
-                path: "/algorithm/algorithmList",
-                name: "Algorithm",
-                component: AlgorithmList
+                path: "/algorithm/list",
+                name: "algorithm_list",
+                component: () => import("@/pages/algorithm/list.vue")
             },
             {
                 path: "/algorithm/DFS",
                 name: "DFS",
-                component: DFS
+                component: () => import("@/pages/algorithm/DFS/index.vue")
             },
             {
                 path: "/algorithm/BFS",
                 name: "BFS",
-                component: BFS
+                component: () => import("@/pages/algorithm/BFS/index.vue")
             }
         ]
     },
