@@ -47,6 +47,10 @@ export default {
                 {
                     name: "纯css饼图",
                     path: "/hearth/pie_chart_css"
+                },
+                {
+                    name: "自定义虚线边框",
+                    path: "/hearth/custom_border"
                 }
             ]
         };

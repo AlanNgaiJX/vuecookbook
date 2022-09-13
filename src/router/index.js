@@ -145,6 +145,11 @@ const routes = [
                 path: "/hearth/pie_chart_css",
                 name: "pie_chart_css",
                 component: () => import("@/pages/hearth/pie_chart_css/index.vue")
+            },
+            {
+                path: "/hearth/custom_border",
+                name: "custom_border",
+                component: () => import("@/pages/hearth/custom_border/index.vue")
             }
         ]
     },
