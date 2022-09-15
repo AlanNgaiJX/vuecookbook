@@ -150,7 +150,12 @@ const routes = [
                 path: "/hearth/custom_border",
                 name: "custom_border",
                 component: () => import("@/pages/hearth/custom_border/index.vue")
-            }
+            },
+            {
+                path: "/hearth/prevent_mobile_keyboard",
+                name: "prevent_mobile_keyboard",
+                component: () => import("@/pages/hearth/prevent_mobile_keyboard/index.vue")
+            },
         ]
     },
     {

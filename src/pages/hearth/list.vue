@@ -51,6 +51,10 @@ export default {
                 {
                     name: "自定义虚线边框",
                     path: "/hearth/custom_border"
+                },
+                {
+                    name: "阻止唤起手机键盘",
+                    path: "/hearth/prevent_mobile_keyboard"
                 }
             ]
         };
