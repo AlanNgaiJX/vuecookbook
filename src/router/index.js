@@ -369,6 +369,11 @@ const routes = [
                 path: "/javascript/base64_to_file",
                 name: "base64_to_file",
                 component: () => import("../pages/javascript/base64_to_file.vue")
+            },
+            {
+                path: "/javascript/locale_compare",
+                name: "locale_compare",
+                component: () => import("../pages/javascript/locale_compare.vue")
             }
         ]
     }

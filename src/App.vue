@@ -6,6 +6,6 @@
 
 <style lang="scss" scoped>
 #app {
-    font-size: 0.24rem;
+    font-size: 12px;
 }
 </style>

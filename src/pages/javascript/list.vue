@@ -4,8 +4,12 @@
             title="javascript"
             :list="[
                 {
-                    path: 'base64_to_file',
+                    path: '/javascript/base64_to_file',
                     name: '二进制处理，base64转文件'
+                },
+                {
+                    path: '/javascript/locale_compare',
+                    name: 'string.localeCompare的应用（文字拼音排序）'
                 }
             ]"
         />
