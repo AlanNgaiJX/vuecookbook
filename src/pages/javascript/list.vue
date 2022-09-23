@@ -10,6 +10,10 @@
                 {
                     path: '/javascript/locale_compare',
                     name: 'string.localeCompare的应用（文字拼音排序）'
+                },
+                {
+                    path: '/javascript/intl_segmenter',
+                    name: 'js原生中文分词'
                 }
             ]"
         />

@@ -374,6 +374,11 @@ const routes = [
                 path: "/javascript/locale_compare",
                 name: "locale_compare",
                 component: () => import("../pages/javascript/locale_compare.vue")
+            },
+            {
+                path: "/javascript/intl_segmenter",
+                name: "intl_segmenter",
+                component: () => import("../pages/javascript/intl_segmenter.vue")
             }
         ]
     }
