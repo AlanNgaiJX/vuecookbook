@@ -155,7 +155,7 @@ const routes = [
                 path: "/hearth/prevent_mobile_keyboard",
                 name: "prevent_mobile_keyboard",
                 component: () => import("@/pages/hearth/prevent_mobile_keyboard/index.vue")
-            },
+            }
         ]
     },
     {
@@ -351,6 +351,24 @@ const routes = [
                 path: "/other_demo/poster_make",
                 name: "poster_make",
                 component: () => import("../pages/other_demo/poster_make/index.vue")
+            }
+        ]
+    },
+    {
+        path: "/javascript",
+        name: "javascript",
+        component: () => import("../pages/javascript/index.vue"),
+        redirect: "/javascript/list",
+        children: [
+            {
+                path: "/javascript/list",
+                name: "list",
+                component: () => import("../pages/javascript/list.vue")
+            },
+            {
+                path: "/javascript/base64_to_file",
+                name: "base64_to_file",
+                component: () => import("../pages/javascript/base64_to_file.vue")
             }
         ]
     }

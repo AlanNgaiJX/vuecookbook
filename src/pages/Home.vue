@@ -24,6 +24,10 @@ export default {
                     path: "/hearth"
                 },
                 {
+                    name: "javascript",
+                    path: "/javascript"
+                },
+                {
                     name: "js_api",
                     path: "/js_api"
                 },
