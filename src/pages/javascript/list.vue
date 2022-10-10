@@ -14,6 +14,10 @@
                 {
                     path: '/javascript/intl_segmenter',
                     name: 'js原生中文分词'
+                },
+                {
+                    path: '/javascript/exif',
+                    name: '手写Exif'
                 }
             ]"
         />

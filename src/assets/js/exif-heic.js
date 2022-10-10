@@ -605,5 +605,6 @@ function findEXIFinJPEG(data)
 
 
 export default {
-    findEXIFinHEIC
+    findEXIFinHEIC,
+    findEXIFinJPEG
 }

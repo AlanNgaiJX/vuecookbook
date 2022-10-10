@@ -379,6 +379,16 @@ const routes = [
                 path: "/javascript/intl_segmenter",
                 name: "intl_segmenter",
                 component: () => import("../pages/javascript/intl_segmenter.vue")
+            },
+            {
+                path: "/javascript/data_view",
+                name: "data_view",
+                component: () => import("../pages/javascript/data_view.vue")
+            },
+            {
+                path: "/javascript/exif",
+                name: "exif",
+                component: () => import("../pages/javascript/exif/index.vue")
             }
         ]
     }

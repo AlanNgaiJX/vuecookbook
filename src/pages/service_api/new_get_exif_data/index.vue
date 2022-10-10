@@ -68,15 +68,18 @@ export default {
                 var reader = new FileReader();
 
                 reader.onload = () => {
-                    var tags = HEICexif.findEXIFinHEIC(reader.result);
+                    var tags = HEICexif.findEXIFinJPEG(reader.result);
                     var DateTime = tags["DateTime"];
                     var DateTimeDigitized = tags["DateTimeDigitized"];
                     var DateTimeOriginal = tags["DateTimeOriginal"];
 
+                    const Quality = tags["Quality"];
 
-                    this.output.push(`DateTime:${DateTime}`);
-                    this.output.push(`DateTimeDigitized:${DateTimeDigitized}`);
-                    this.output.push(`DateTimeOriginal:${DateTimeOriginal}`);
+                    this.output.push(`Quality:${Quality}`);
+
+                    // this.output.push(`DateTime:${DateTime}`);
+                    // this.output.push(`DateTimeDigitized:${DateTimeDigitized}`);
+                    // this.output.push(`DateTimeOriginal:${DateTimeOriginal}`);
                 };
 
                 reader.readAsArrayBuffer(e.target.files[0]);
