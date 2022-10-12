@@ -59,7 +59,7 @@ export default {
             //     });
             // });
 
-            this.getImage(img99).then(image => {
+            this.getImage(img1).then(image => {
                 new FujifilmExif(image).then(result => {
                     console.log(result);
                 });
@@ -68,6 +68,7 @@ export default {
     },
     mounted() {
         this.testImproveExif();
+        // this.testBasicExif();
     }
 };
 </script>

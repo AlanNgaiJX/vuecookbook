@@ -77,6 +77,8 @@ export default {
 
                     this.output.push(`Quality:${Quality}`);
 
+                    console.log(tags);
+
                     // this.output.push(`DateTime:${DateTime}`);
                     // this.output.push(`DateTimeDigitized:${DateTimeDigitized}`);
                     // this.output.push(`DateTimeOriginal:${DateTimeOriginal}`);

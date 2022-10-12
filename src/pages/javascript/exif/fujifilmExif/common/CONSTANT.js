@@ -1,43 +1,34 @@
 import util from "./util";
 const CONSTANT = {
     TiffTags: {
-        // 0x0100: "ImageWidth",
-        // 0x0101: "ImageHeight",
-        0x8769: "ExifIFDPointer"
-        // 0x8825: "GPSInfoIFDPointer",
-        // 0xa005: "InteroperabilityIFDPointer",
-        // 0x0102: "BitsPerSample",
-        // 0x0103: "Compression",
-        // 0x0106: "PhotometricInterpretation",
-        // 0x0112: "Orientation",
-        // 0x0115: "SamplesPerPixel",
-        // 0x011c: "PlanarConfiguration",
-        // 0x0212: "YCbCrSubSampling",
-        // 0x0213: "YCbCrPositioning",
-        // 0x011a: "XResolution",
-        // 0x011b: "YResolution",
-        // 0x0128: "ResolutionUnit",
-        // 0x0111: "StripOffsets",
-        // 0x0116: "RowsPerStrip",
-        // 0x0117: "StripByteCounts",
-        // 0x0201: "JPEGInterchangeFormat",
-        // 0x0202: "JPEGInterchangeFormatLength",
-        // 0x012d: "TransferFunction",
-        // 0x013e: "WhitePoint",
-        // 0x013f: "PrimaryChromaticities",
-        // 0x0211: "YCbCrCoefficients",
-        // 0x0214: "ReferenceBlackWhite",
-        // 0x0132: "DateTime",
-        // 0x010e: "ImageDescription",
-        // 0x010f: "Make",
-        // 0x0110: "Model",
-        // 0x0131: "Software",
-        // 0x013b: "Artist",
-        // 0x8298: "Copyright"
+        0x0112: "Orientation",
+        0x8769: "ExifIFDPointer",
+        0x0132: "DateTime",
+        0x010f: "Make",
+        0x0110: "Model"
     },
     ExifTags: {
-        0x927c: "MakerNote"
-        // 0x8602: "WB_GRGBLevels"
+        0x829a: {
+            tagName: "ExposureTime",
+            parser: function(APEX) {
+                const val = Number(APEX.toString());
+                if (val < 1) {
+                    return `1/${parseInt(1 / val)}`;
+                } else {
+                    return val;
+                }
+            }
+        },
+        0x8827: "ISO",
+        0x9202: {
+            tagName: "ApertureValue",
+            parser: function(APEX) {
+                return APEX.toString();
+            }
+        },
+        0x927c: "MakerNote",
+        0xa002: "PixelXDimension",
+        0xa003: "PixelYDimension"
     },
     FujiTags: {
         0x0000: {
