@@ -389,6 +389,16 @@ const routes = [
                 path: "/javascript/exif",
                 name: "exif",
                 component: () => import("../pages/javascript/exif/index.vue")
+            },
+            {
+                path: "/javascript/image_trans",
+                name: "image_trans",
+                component: () => import("../pages/javascript/image_trans/index.vue")
+            },
+            {
+                path: "/javascript/dispatch_event",
+                name: "dispatch_event",
+                component: () => import("../pages/javascript/dispatch_event.vue")
             }
         ]
     }

@@ -18,6 +18,14 @@
                 {
                     path: '/javascript/exif',
                     name: '手写Exif'
+                },
+                {
+                    path: '/javascript/image_trans',
+                    name: 'image转换大全'
+                },
+                {
+                    path: '/javascript/dispatch_event',
+                    name: '自定义点击事件'
                 }
             ]"
         />
