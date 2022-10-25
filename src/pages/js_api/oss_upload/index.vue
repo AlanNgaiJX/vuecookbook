@@ -30,7 +30,8 @@
 </template>
 
 <script>
-import Uploader from "./uploader.js";
+// import Uploader from "D:/Desktop/alan/mine/alanngai-oss-web-uploader/dist/alanngai-oss-web-uploader.js";
+import Uploader from "./uploader";
 import axios from "axios";
 
 export default {
