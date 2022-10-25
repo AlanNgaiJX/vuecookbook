@@ -210,6 +210,11 @@ const routes = [
                 path: "/js_api/colorthief",
                 name: "colorthief",
                 component: () => import("@/pages/js_api/colorthief/index.vue")
+            },
+            {
+                path: "/js_api/oss_upload",
+                name: "oss_upload",
+                component: () => import("@/pages/js_api/oss_upload/index.vue")
             }
         ]
     },

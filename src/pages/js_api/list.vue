@@ -27,6 +27,10 @@ export default {
                 {
                     name: "Colorthief",
                     path: "/js_api/colorthief"
+                },
+                {
+                    name: "oss_upload",
+                    path: "/js_api/oss_upload"
                 }
             ]
         };
