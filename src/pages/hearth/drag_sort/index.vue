@@ -8,7 +8,7 @@
         :key="index"
         :draggable="true"
         @dragstart="dragstart(item)"
-        @dragenter="dragenter($event, item)"
+        @dragover="dragover($event, item)"
         @dragend="dragEnd(list)"
       >
         <div>
@@ -49,7 +49,7 @@ export default {
     dragstart(item) {
       this.dragItem = item;
     },
-    dragenter(e, item) {
+    dragover(e, item) {
       this.hoverItem = item;
       const itemEl = this.closest(e.target, "drag-sort-item");
       const { width, height, pageX, pageY } = this.getElementRectInfo(itemEl);
