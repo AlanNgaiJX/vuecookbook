@@ -26,7 +26,11 @@
                 {
                     path: '/javascript/dispatch_event',
                     name: '自定义点击事件'
-                }
+                },
+                {
+                    path: '/javascript/transparent_canvas',
+                    name: 'canvas抠图'
+                },
             ]"
         />
     </div>

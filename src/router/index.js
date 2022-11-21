@@ -409,6 +409,11 @@ const routes = [
         path: "/javascript/dispatch_event",
         name: "dispatch_event",
         component: () => import("../pages/javascript/dispatch_event.vue")
+      },
+      {
+        path: "/javascript/transparent_canvas",
+        name: "transparent_canvas",
+        component: () => import("../pages/javascript/transparent_canvas.vue")
       }
     ]
   }
