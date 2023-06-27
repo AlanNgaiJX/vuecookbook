@@ -160,6 +160,11 @@ const routes = [
         path: "/hearth/drag_sort",
         name: "drag_sort",
         component: () => import("@/pages/hearth/drag_sort/index.vue")
+      },
+      {
+        path: "/hearth/sticky",
+        name: "sticky",
+        component: () => import("@/pages/hearth/sticky/index.vue")
       }
     ]
   },

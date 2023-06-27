@@ -59,6 +59,10 @@ export default {
         {
           name: "拖拽排序",
           path: "/hearth/drag_sort"
+        },
+        {
+          name: "研究position: sticky",
+          path: "/hearth/sticky"
         }
       ]
     };
