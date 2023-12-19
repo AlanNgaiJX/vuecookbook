@@ -366,6 +366,11 @@ const routes = [
         path: "/other_demo/poster_make",
         name: "poster_make",
         component: () => import("../pages/other_demo/poster_make/index.vue")
+      },
+      {
+        path: "/other_demo/better_scroll_infinity",
+        name: "better_scroll_infinity",
+        component: () => import("../pages/other_demo/better_scroll_infinity/index.vue")
       }
     ]
   },

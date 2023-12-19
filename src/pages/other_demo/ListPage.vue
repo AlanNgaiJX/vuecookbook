@@ -19,6 +19,10 @@ export default {
                 {
                     name: "海报生成",
                     path: "/other_demo/poster_make"
+                },
+                {
+                    name: "bs无限滚动",
+                    path: "/other_demo/better_scroll_infinity"
                 }
             ]
         };
